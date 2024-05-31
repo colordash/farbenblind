@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #F5F5DC;
+
+    
+    display: grid;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+#header{
+    margin: 5px;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: #e4e4a1;
+    display: flex;
+    justify-content: right;
+    height: 5vh;
+    border-radius: 40px;
+}
+#logoutButton{
+    border-radius: 40px;
+    border-width: 0px;
+    border-color: black;
+    font-size: large;
+    font-family: 'Lato', sans-serif;
+}
+
+#title{
+    display: grid;
+    grid-template-rows: 50px repeat(auto-fill, minmax(70px, auto));
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    
+    
+}
+#div-score{
+    margin-left: 10px;
+    grid-column: 1/ 2;
+    grid-row: 1/ 2;
+   
+}
+#div-timer{
+    
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+ 
+}
+#div-highscore{
+    
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+#highscore{
+    margin-left: 100px;
+}
+@media (max-width: 562px){
+    #highscore{
+        margin-left: 0px;
+    }
+}
+
+
+#div-titel{
+    
+    grid-column: 1/4;
+    grid-row: 2/3;
+    font-size: 25px;
+    text-align: center;
+    
+    
+}
+
+#spielfeld {
+
+    display: grid;
+    grid-template-columns:repeat(10, 1fr);
+    width:min(98vw, 130vh);
+    gap:0.5vw;
+    justify-self: center;
+    align-self: center ;
+    padding-bottom: 10px;
+}
+#spielfeld div{
+    aspect-ratio: 1;
+}
+  
+
+
+:root {
+    --farbe1: red; /* Standardwert für die Variable */
+  }
+:root {
+    --farbe2: red; /* Standardwert für die Variable */
+}
+@keyframes feldleer{
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+
+.feldleer{
+    background-color: var(--farbe2);
+    border-color: black;
+    border: 100px;
+    transform: scale(0.96);
+    animation: feldleer 0.3s infinite; 
+
+}
+
+.feldeins{
+    background-color: var(--farbe1);
+}
+
+.feldzwei{
+    background-color: var(--farbe2);
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    
+  }
+  
+  .modal-content {
+    font-family: 'Lato', sans-serif;
+    border-radius: 1em;
+    background-color: #B9DEC1  ;
+    padding: 30px;
+    text-align: center;
+    
+  }
+  
+  #resetButton {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: large;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin-top: 10px;
+    background-color: #A7D1C7 ;
+  }
